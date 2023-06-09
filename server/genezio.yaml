@@ -1,0 +1,16 @@
+name: getting-started-genezio
+region: eu-central-1
+cloudProvider: aws
+sdk:
+  language: js
+  path: ../client/src/sdk
+scripts:
+  preBackendDeploy: npm install
+  preFrontendDeploy: cd ../client && npm install && npm run build
+frontend:
+  path: ../client/build
+  subdomain: lime-controversial-rhinoceros
+classes:
+  - path: ./ReactBoilerplate.js
+    type: jsonrpc
+    methods: []
